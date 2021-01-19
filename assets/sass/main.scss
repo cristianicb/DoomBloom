@@ -4,19 +4,91 @@
 @import 'lib/fontawesome/font-awesome';
 @import 'lib/fontface';
 @import 'lib/keyframes';
-
-
 $corporateColor: tomato;
-
-* {
-    // border: 1px solid $corporateColor;
-}
-
+// * {
+//     border: 1px solid $corporateColor;
+// }
 html,
 body {
     font-size: $base * 2;
     font-family: $font_family_base;
     line-height: $base * 3;
     color: $body_color;
+    background-color: #7FCBDE;
     min-height: 100vh;
+}
+
+.bloque {
+    height: 100vh;
+    position: relative;
+    .logo {
+        width: 400px;
+        position: absolute;
+        left: 50vw;
+        top: 50px;
+        margin-left: -200px;
+    }
+    .c {
+        width: 90vw;
+        position: relative;
+        left: 50vw;
+        top: 40vh;
+        margin-left: -45vw;
+        display: flex;
+        overflow-y: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bloque {
+        height: auto;
+        padding-bottom: 300px;
+        .logo {
+            width: 200px;
+            margin-left: -100px;
+        }
+        .c {
+            width: 90vw;
+            position: absolute;
+            left: 50vw;
+            top: 150px;
+            margin-left: -45vw;
+            display: block;
+            img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: white;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
